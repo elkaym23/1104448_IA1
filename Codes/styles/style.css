@@ -1,0 +1,139 @@
+:root {
+    --dark-bg: #0a0a12;
+    --gold: #c8aa6e;
+    --blue: #0ac8b9;
+    --text: #f0e6d2;
+}
+
+body {
+    background: url('../../Assets/kda.jpg') no-repeat center fixed;
+    background-size: cover;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.profile {
+    width: 80%;
+    margin: 5% auto;
+    background: rgba(10, 10, 18, 0.93);
+    border: 3px solid var(--gold);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(200, 170, 110, 0.3);
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--blue);
+}
+
+h1 {
+    font-family: 'Beaufort for LOL', serif;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.nav-tab {
+    color: var(--text);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    position: relative;
+    font-weight: bold;
+}
+
+.nav-tab:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background: var(--gold);
+    animation: tab-glow 0.5s;
+}
+
+@keyframes tab-glow {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 60%;
+        opacity: 1;
+    }
+}
+
+.logo {
+    width: 80px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+section {
+    margin: 25px 0;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    color: var(--gold);
+    border-bottom: 2px solid var(--blue);
+    padding-bottom: 6px;
+}
+
+blockquote {
+    font-style: italic;
+    color: var(--blue);
+    border-left: 4px solid var(--gold);
+    margin: 15px 0;
+    padding-left: 15px;
+    background: rgba(10, 10, 18, 0.6);
+    border-radius: 5px;
+}
+
+.personality-screenshot {
+    display: block;
+    margin: 15px auto;
+    max-width: 90%;
+    border: 3px solid var(--gold);
+    border-radius: 8px;
+}
